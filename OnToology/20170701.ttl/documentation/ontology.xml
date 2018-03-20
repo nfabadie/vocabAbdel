@@ -1,0 +1,1011 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://data.ign.fr/def/xysemantics#"
+     xml:base="http://data.ign.fr/def/xysemantics"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/">
+    <owl:Ontology rdf:about="http://data.ign.fr/def/xysemantics">
+        <ns:license rdf:resource="http://creativecommons.org/licenses/by/2.0/"/>
+        <ns:license rdf:resource="http://opendatacommons.org/licenses/by/"/>
+        <ns:license rdf:resource="http://www.data.gouv.fr/Licence-Ouverte-Open-Licence"/>
+        <terms:contributor rdf:resource="http://cedric.cnam.fr/~hamdif/"/>
+        <terms:contributor rdf:resource="http://recherche.ign.fr/labos/cogit/cv.php?prenom=BÃ©nÃ©dicte&amp;nom=Bucher"/>
+        <terms:creator rdf:resource="http://recherche.ign.fr/labos/cogit/cv.php?prenom=Abdelfettah&amp;nom=Feliachi"/>
+        <terms:creator rdf:resource="http://recherche.ign.fr/labos/cogit/cv.php?prenom=Nathalie&amp;nom=Abadie"/>
+        <terms:description xml:lang="fr">Ontologie des Ã©lÃ©ments reprÃ©sentant la sÃ©mantique des rÃ©fÃ©rences spatiales.</terms:description>
+        <terms:description xml:lang="en">Ontologie of elements tha represents the semantic of spatiales references.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-01-01</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-01</terms:modified>
+        <terms:publisher rdf:resource="http://fr.dbpedia.org/resource/Institut_national_de_l%27information_g%C3%A9ographique_et_foresti%C3%A8re"/>
+        <terms:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright 2017, IGN</terms:rights>
+        <terms:title xml:lang="fr">Ontologie de la sÃ©mantique des XY</terms:title>
+        <terms:title xml:lang="en">XY semantics ontology</terms:title>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xysemantics</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="http://data.ign.fr/def/xysemantics"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 1.1 - 2017-07-01</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://data.ign.fr/def/geometrie#geometry -->
+
+
+    <owl:ObjectProperty rdf:about="http://data.ign.fr/def/geometrie#geometry">
+        <rdfs:range rdf:resource="http://data.ign.fr/def/geometrie#Geometry"/>
+        <rdfs:comment xml:lang="en">Geometric primitive associated to an objet to represent its location and possibly its forme</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Primitive gÃ©omÃ©trique associÃ©e Ã  un objet pour reprÃ©senter sa localisation et Ã©ventuellement sa forme.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour gÃ©omÃ©trie</rdfs:label>
+        <rdfs:label xml:lang="en">has geometry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#absolutePositionalAccuracy -->
+
+
+    <owl:ObjectProperty rdf:about="http://data.ign.fr/def/xysemantics#absolutePositionalAccuracy">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/geometrie#Geometry"/>
+        <rdfs:range rdf:resource="http://data.ign.fr/def/xysemantics#AbsolutePositionalAccuracy"/>
+        <rdfs:comment xml:lang="fr">DÃ©signe l&apos;Ã©lÃ©ment de qualitÃ© qui reprÃ©sente la prÃ©cision absolue de position.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates the quality element that represents the absolute positional accuracy.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour prÃ©cision absolue de position</rdfs:label>
+        <rdfs:label xml:lang="en">has absolute postitional accuracy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#deductiveSource -->
+
+
+    <owl:ObjectProperty rdf:about="http://data.ign.fr/def/xysemantics#deductiveSource">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/xysemantics#IndirectEvaluation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:comment xml:lang="fr">DÃ©signe l&apos;information relative aux donnÃ©es utilisÃ©es dans une mÃ©thode d&apos;Ã©valuation dÃ©ductive (indirecte). Cf. ISO 19157:2013, partie 9.2.3 et tableau C.4 ligne 50.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates the piece information used in a deductive (indirect) evaluation method. The range of this property is PROV-O:Entity. Cf. ISO 19157:2013, section 9.2.3 and table C.4 line 50.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour source de dÃ©duction</rdfs:label>
+        <rdfs:label xml:lang="en">has deductive source</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#evaluationMethod -->
+
+
+    <owl:ObjectProperty rdf:about="http://data.ign.fr/def/xysemantics#evaluationMethod">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/xysemantics#AbsolutePositionalAccuracy"/>
+        <rdfs:range rdf:resource="http://data.ign.fr/def/xysemantics#EvaluationMethod"/>
+        <rdfs:comment xml:lang="fr">DÃ©signe la mÃ©thode d&apos;Ã©valuation de l&apos;Ã©lÃ©ment de qualitÃ©. Cf. ISO 19157:2013, partie 7.4.3 et tableau C.2 ligne 8.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates  the evaluation method of the quality element. Cf. ISO 19157:2013, section 7.4.3 and table C.2 line 8.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour mÃ©thode d&apos;Ã©valuation</rdfs:label>
+        <rdfs:label xml:lang="en">has evaluation method</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#evaluationMethodTypeCode -->
+
+
+    <owl:ObjectProperty rdf:about="http://data.ign.fr/def/xysemantics#evaluationMethodTypeCode">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/xysemantics#EvaluationMethod"/>
+        <rdfs:range rdf:resource="http://data.ign.fr/def/xysemantics#EvaluationMethodTypeCode"/>
+        <rdfs:comment xml:lang="fr">DÃ©signe le type de mÃ©thode utilisÃ©e pour Ã©valuer l&apos;Ã©lÃ©ment de qualitÃ©. Cf. ISO 19157:2013, partie 7.4.3, et, tableau C.4 ligne 42.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates the type of evalution method of a quality element. Cf. ISO 19157:2013, section 7.4.3 and table C.4 line 42.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour type de mÃ©thode d&apos;Ã©valuation</rdfs:label>
+        <rdfs:label xml:lang="en">has evaluation method type code</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#evaluationMethodType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#evaluationResult -->
+
+
+    <owl:ObjectProperty rdf:about="http://data.ign.fr/def/xysemantics#evaluationResult">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/xysemantics#AbsolutePositionalAccuracy"/>
+        <rdfs:range rdf:resource="http://data.ign.fr/def/xysemantics#Result"/>
+        <rdfs:comment xml:lang="fr">DÃ©signe le rÃ©sultat de l&apos;Ã©valuation d&apos;un Ã©lÃ©ment de qualitÃ©. Cf. ISO 19157:2013, partie 7.4.4.1 et tableau C.2 ligne 9.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates sthe evaluation result  of a data quality element. Cf. ISO 19157:2013, section 7.4.4.1 and table C.2 line 9.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour rÃ©sultat d&apos;Ã©valuation</rdfs:label>
+        <rdfs:label xml:lang="en">has evaluation result</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#result"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#geometricResolution -->
+
+
+    <owl:ObjectProperty rdf:about="http://data.ign.fr/def/xysemantics#geometricResolution">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/geometrie#Geometry"/>
+        <rdfs:range rdf:resource="http://data.ign.fr/def/xysemantics#GeometricResolution"/>
+        <rdfs:comment xml:lang="fr">DÃ©signe la rÃ©solution de la gÃ©omÃ©trie</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates the spatial resolution of the geometry .</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour rÃ©solution geomtrique</rdfs:label>
+        <rdfs:label xml:lang="en">has resolution</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#isModeledFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://data.ign.fr/def/xysemantics#isModeledFrom">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/geometrie#Geometry"/>
+        <rdfs:range rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElement"/>
+        <rdfs:comment xml:lang="fr">DÃ©signe l&apos;Ã©lÃ©ment caractÃ©ristique de la forme utilisÃ© pour la modÃ©lisation gÃ©omÃ©trique</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates the shape characteristic element used for the geometric modelling</rdfs:comment>
+        <rdfs:label xml:lang="fr">est modÃ©lisÃ© Ã  partir de</rdfs:label>
+        <rdfs:label xml:lang="en">is modelled from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#shapeCharacteristicElementType -->
+
+
+    <owl:ObjectProperty rdf:about="http://data.ign.fr/def/xysemantics#shapeCharacteristicElementType">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElement"/>
+        <rdfs:range rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdfs:comment xml:lang="en">indicates the shape characteristic element chosen for the geometric moddeling.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour type d&apos;Ã©lÃ©ment caractÃ©ristique de la forme</rdfs:label>
+        <rdfs:label xml:lang="en">has form charactestic element type</rdfs:label>
+        <rdfs:seeAlso xml:lang="fr">DÃ©signe le type l&apos;Ã©lÃ©ment caractÃ©ristique de la forme choisi pour reprÃ©senter la gÃ©omÃ©trie.</rdfs:seeAlso>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://qudt.org/schema/qudt#unit -->
+
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt#unit">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/xysemantics#DistanceResolution"/>
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/xysemantics#Result"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt#Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#host -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#host">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrower -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrower"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#scaleDenominator -->
+
+
+    <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/xysemantics#scaleDenominator">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/xysemantics#EquivalentScaleResolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="fr">Le dÃ©nominateur de l&apos;Ã©chelle equivalente qui reprÃ©sente la rÃ©solution gÃ©omÃ©trique. Cf. ISO 19115-1:2014 tableau B.3.3 ligne 78. </rdfs:comment>
+        <rdfs:comment xml:lang="en">The denominator of the ratio representing the equivalent scale resolution. Cf. ISO 19115-1:2014 table B.3.3 line 78. </rdfs:comment>
+        <rdfs:label xml:lang="fr">dÃ©nominateur d&apos;Ã©chelle</rdfs:label>
+        <rdfs:label xml:lang="en">scale denominator</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#value -->
+
+
+    <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/xysemantics#value">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/xysemantics#DistanceResolution"/>
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/xysemantics#Result"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Quantitative value of the result of a data quality evaluation or the distance geomtric resolution</rdfs:comment>
+        <rdfs:comment xml:lang="fr">valeur quantitative du rÃ©sultat d&apos;Ã©valuation d&apos;une qualitÃ© de donnÃ©e ou d&apos;une rÃ©solution gÃ©omÃ©trique exprimÃ©e en distance</rdfs:comment>
+        <rdfs:label xml:lang="fr">valeur</rdfs:label>
+        <rdfs:label xml:lang="en">value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://data.ign.fr/def/geometrie#Geometry -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/geometrie#Geometry">
+        <rdfs:subClassOf rdf:resource="http://geovocab.org/geometry#Geometry"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/sf#Geometry"/>
+        <rdfs:label xml:lang="en">Geometry</rdfs:label>
+        <rdfs:label xml:lang="fr">GÃ©omÃ©trie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#AbsolutePositionalAccuracy -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/xysemantics#AbsolutePositionalAccuracy">
+        <rdfs:comment xml:lang="en">Quaility element representing the gap between the coordinates reported values and their real values . Cf. ISO 19157:2013, section 7.3.4 and table C.2 line 20.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Ã©lÃ©ment de qualitÃ© qui reprÃ©sente la proximitÃ© des valeurs de coordonnÃ©es rapportÃ©es par rapport aux valeurs vÃ©ritables ou considÃ©rÃ©es comme telles. Cf. ISO 19157:2013, partie 7.3.4 et tableau C.2 ligne 20.</rdfs:comment>
+        <rdfs:label xml:lang="en">absolute positional planimetric accuracy</rdfs:label>
+        <rdfs:label xml:lang="fr">prÃ©cision planimÃ©trique absolue</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#AbsoluteExternalPositionalAccuracy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#AggregationDerivation -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/xysemantics#AggregationDerivation">
+        <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/xysemantics#EvaluationMethod"/>
+        <rdfs:comment xml:lang="en">Evaluation methode of spatial data quality by aggregation or derivation from other quality elements. Cf. ISO 19157:2013, section 9.3 and table C.4 line 55 .</rdfs:comment>
+        <rdfs:comment xml:lang="fr">MÃ©thode d&apos;Ã©valuation de la qualitÃ© des donnÃ©es gÃ©ographique par agrÃ©gation ou dÃ©rivation Ã  partir d&apos;autres Ã©lÃ©ment de qualitÃ©. Cf. ISO 19157:2013, partie 9.3 et tableau C.4 ligne 55 .</rdfs:comment>
+        <rdfs:label xml:lang="en">aggregation/derivation based evaluation</rdfs:label>
+        <rdfs:label xml:lang="fr">Ã©valuation par agrÃ©gation/dÃ©rivation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#AngularDistanceResolution -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/xysemantics#AngularDistanceResolution">
+        <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/xysemantics#DistanceResolution"/>
+        <rdfs:comment xml:lang="en">Geometric resolution represented as a sampling angular measurement. Cf. ISO 19115-1:2014 table B.3.4 line 83.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">RÃ©solution gÃ©omÃ©trique exprimÃ©e par une mesure d&apos;Ã©chantillonage angulaire. Cf. ISO 19115-1:2014 tableau B.3.4 ligne 83.</rdfs:comment>
+        <rdfs:label xml:lang="en">Angular Distance resolution.</rdfs:label>
+        <rdfs:label xml:lang="fr">RÃ©solution par distance angulaire.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#DataEvaluation -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/xysemantics#DataEvaluation">
+        <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/xysemantics#EvaluationMethod"/>
+        <rdfs:comment xml:lang="en">Evaluation methode of spatial data quality by data inspection. Cf. ISO 19157:2013, section9.2 and table C.4 line 47 .</rdfs:comment>
+        <rdfs:comment xml:lang="fr">MÃ©thode d&apos;Ã©valuation de qualitÃ© par inspections des donnÃ©es.  Cf. ISO 19157:2013, partie 9.2 et tableau C.4 ligne 47 .</rdfs:comment>
+        <rdfs:label xml:lang="en">data evaluation</rdfs:label>
+        <rdfs:label xml:lang="fr">Ã©valuation des donnÃ©es</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#DistanceResolution -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/xysemantics#DistanceResolution">
+        <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/xysemantics#GeometricResolution"/>
+        <rdfs:label xml:lang="en">Distance resolution</rdfs:label>
+        <rdfs:label xml:lang="fr">RÃ©solution par distance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#EquivalentScaleResolution -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/xysemantics#EquivalentScaleResolution">
+        <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/xysemantics#GeometricResolution"/>
+        <rdfs:comment xml:lang="en">Gemetric resolution represented as a scale of comparable map or a paper plan. Cf. ISO 19115-1:2014 table B.3.4 line 80.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">RÃ©solution gÃ©omÃ©trique des donnÃ©es exprimÃ©e comme l&apos;Ã©chelle d&apos;une carte ou d&apos;un plan papier comparable. Cf. ISO 19115-1:2014 tableau B.3.4 ligne 80.</rdfs:comment>
+        <rdfs:label xml:lang="en">Equivalent scale Resolution.</rdfs:label>
+        <rdfs:label xml:lang="fr">RÃ©solution par Ã©chelle Ã©quivalente.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#EvaluationMethod -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/xysemantics#EvaluationMethod">
+        <rdfs:comment xml:lang="en">Evaluation method of quality of spatial data. Cf. ISO 19157:2013, section 9.2 and table C.4 line 41.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">mÃ©thode d&apos;Ã©valuation de qualitÃ© des donnÃ©es gÃ©ographiques. Cf. ISO 19157:2013, partie 9.2 et tableau C.4 ligne 41.</rdfs:comment>
+        <rdfs:label xml:lang="en">evaluation method</rdfs:label>
+        <rdfs:label xml:lang="fr">mÃ©thode d&apos;Ã©valuation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#EvaluationMethodTypeCode -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/xysemantics#EvaluationMethodTypeCode">
+        <rdfs:comment xml:lang="fr">Code du type de la mÃ©thode d&apos;Ã©valuation de qualitÃ© (directe interne, directe externe ou indirecte). Cf. ISO 19157:2013, partie C.3.2 et tableau C.12.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Evaluation methode type code: directe interne, directe externe ou indirecte. Cf. ISO 19157:2013, section C.3.2 and tablea C.12.</rdfs:comment>
+        <rdfs:label xml:lang="en">evaluation method type code</rdfs:label>
+        <rdfs:label xml:lang="fr">type de mÃ©thode d&apos;Ã©valuation</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#EvaluationMethodTypeCode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#FullInspection -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/xysemantics#FullInspection">
+        <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/xysemantics#DataEvaluation"/>
+        <rdfs:comment xml:lang="en">Evaluation methode of spatial data quality by full data inspection. Cf. ISO 19157:2013, section 9.2.2 and table C.4 line 48 .</rdfs:comment>
+        <rdfs:comment xml:lang="fr">MÃ©thode d&apos;Ã©valuation de la qualitÃ© par inspection exhaustive des donnÃ©es. Cf. ISO 19157:2013, partie 9.2.2 et tableau C.4 ligne 48.</rdfs:comment>
+        <rdfs:label xml:lang="en">full inspection</rdfs:label>
+        <rdfs:label xml:lang="fr">inspection complÃ¨te</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#GeometricResolution -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/xysemantics#GeometricResolution">
+        <rdfs:comment xml:lang="en">Geomtric resolution expressed as a scale factor, a distance or an angle. Cf. ISO 19115-1:2014 table B.3.4 line 79.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">RÃ©solution gÃ©omÃ©trique exprimÃ©e sous forme d&apos;un facteur d&apos;Ã©chelle, d&apos;une distance ou d&apos;un angle. Cf. ISO 19115-1:2014 tableau B.3.4 ligne 79.</rdfs:comment>
+        <rdfs:label xml:lang="en">Geomtric resolution.</rdfs:label>
+        <rdfs:label xml:lang="fr">RÃ©solution gÃ©omÃ©trique.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#GroundDistanceResolution -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/xysemantics#GroundDistanceResolution">
+        <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/xysemantics#DistanceResolution"/>
+        <rdfs:comment xml:lang="en">Geometric resolution represented as a sampling distance on the ground. Cf. ISO 19115-1:2014 table B.3.4 line 81.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">RÃ©solution gÃ©omÃ©trique exprimÃ©e par  une distance Ã©chantillon par rapport au sol. Cf. ISO 19115-1:2014 tableau B.3.4 ligne 81.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ground length distance resolution.</rdfs:label>
+        <rdfs:label xml:lang="fr">RÃ©solution par distance de longeur au sol.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#IndirectEvaluation -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/xysemantics#IndirectEvaluation">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://data.ign.fr/def/xysemantics#DataEvaluation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://data.ign.fr/def/xysemantics#evaluationMethodTypeCode"/>
+                        <owl:hasValue rdf:resource="http://data.ign.fr/def/xysemantics#Indirect"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Evaluation methode of spatial data quality frrom external knowledge or product experiance. It can be subjetcive. Cf. ISO 19157:2013, section 9.2.3 and table C.4 line 49.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">MÃ©thode d&apos;Ã©valuation de la qualitÃ© des donnÃ©es gÃ©ographiques Ã  partir d&apos;une connaissance externe ou l&apos;expÃ©rience du produit. Elle peut Ãªtre subjective. Cf. ISO 19157:2013, partie 9.2.3 et tableau C.4 ligne 49 .</rdfs:comment>
+        <rdfs:label xml:lang="en">indirect evaluation</rdfs:label>
+        <rdfs:label xml:lang="fr">Ã©valuation indirecte</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#Result -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/xysemantics#Result">
+        <rdfs:comment xml:lang="en">Quantitaive result representing the value obtained by an evaluation of a data quality element. Cf. ISO 19157:2013, section 7.4.4.2 et table C.5 line 63.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">RÃ©sultat quantitatif reprÃ©sentant les valeurs obtenues par l&apos;Ã©valuation d&apos;un Ã©lÃ©ment de qualitÃ© des donnÃ©es. Cf. ISO 19157:2013, partie 7.4.4.2 et tableau C.5 ligne 63.</rdfs:comment>
+        <rdfs:label xml:lang="en">evaluation result</rdfs:label>
+        <rdfs:label xml:lang="fr">rÃ©sultat d&apos;Ã©valuation</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#QuantitativeResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#SampleBasedInspection -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/xysemantics#SampleBasedInspection">
+        <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/xysemantics#DataEvaluation"/>
+        <rdfs:comment xml:lang="en">Evaluation methode of spatial data quality by data sample inspection. Cf. ISO 19157:2013, section 9.2.2 and table C.4 line 51.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">MÃ©thode d&apos;Ã©valuation de qualitÃ© par inspection d&apos;un sous ensemble de donnÃ©es. Cf. ISO 19157:2013, partie 9.2.2 et tableau C.4 ligne 51.</rdfs:comment>
+        <rdfs:label xml:lang="en">sample based evaluation</rdfs:label>
+        <rdfs:label xml:lang="fr">Ã©valuation d&apos;Ã©chantillon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#ShapeCharacteristicElement -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElement">
+        <rdfs:comment xml:lang="fr">L&apos;Ã©lÃ©ment caractÃ©ristique de la forme choisi pour la reprÃ©sentation gÃ©omÃ©trique.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Shape characteristic element chosen for the geometric moddeling.</rdfs:comment>
+        <rdfs:label xml:lang="en">shape characteristic element</rdfs:label>
+        <rdfs:label xml:lang="fr">Ã©lÃ©ment caratrÃ©ristique de la forme</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCESpatialFeatures/current#SF"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType">
+        <rdfs:comment xml:lang="en">The type of the shape caracteristic element chosen to represent the geometry</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Type de l&apos;Ã©lÃ©ment caractÃ©ristique de la forme choisi pour reprÃ©senter la gÃ©omÃ©trie</rdfs:comment>
+        <rdfs:label xml:lang="en">shape characteristique element type.</rdfs:label>
+        <rdfs:label xml:lang="fr">type d&apos;Ã©lÃ©ment caractÃ©ristique de la forme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://geovocab.org/geometry#Geometry -->
+
+
+    <owl:Class rdf:about="http://geovocab.org/geometry#Geometry"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt#Unit -->
+
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt#Unit"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/sf#Geometry -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/sf#Geometry"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Entity -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Entity"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://cedric.cnam.fr/~hamdif/ -->
+
+
+    <owl:NamedIndividual rdf:about="http://cedric.cnam.fr/~hamdif/">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/def/xysemantics#Indirect -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/def/xysemantics#Indirect"/>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Body -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Body">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ThreeDBFF"/>
+        <skos:prefLabel xml:lang="en">body</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">corp</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundary -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundary">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#BFB"/>
+        <skos:prefLabel xml:lang="en">Bona Fide  boundary</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">limite Bona Fide</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundaryPoint -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundaryPoint">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#BFB"/>
+        <skos:prefLabel xml:lang="en">Bona Fide  boundary point</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">point de limite Bona Fide</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <skos:narrower rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Body"/>
+        <skos:narrower rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundary"/>
+        <skos:narrower rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundaryPoint"/>
+        <skos:narrower rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Corner"/>
+        <skos:narrower rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Edge"/>
+        <skos:narrower rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Surface"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#BFF"/>
+        <skos:definition xml:lang="fr">L&apos;ensemble des Ã©lÃ©ments caractÃ©ristiques de la forme d&apos;un objet gÃ©ographique matÃ©rialisÃ©s par une discontinuitÃ© physique et donc facilement identifiable. Exemple: l&apos;angle d&apos;un bÃ¢timent.</skos:definition>
+        <skos:definition xml:lang="en">The set of shape characteristic elements of a geographic object materialized by physical discontinuity, and thus easily recognisable. Exemple: the corner of a building.</skos:definition>
+        <skos:prefLabel xml:lang="en">Bona Fide element</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Element Bona Fide</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centre -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centre">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ELIGF"/>
+        <skos:prefLabel xml:lang="en">centre</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">centre</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centreline -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centreline">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#CenterLine"/>
+        <skos:prefLabel xml:lang="fr">axe</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">centreline</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelinePoint -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelinePoint">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ELIGF"/>
+        <skos:prefLabel xml:lang="en">centreline point</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">point de l&apos;axe</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelineSegment -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelineSegment">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <skos:broader rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#OneDIGF"/>
+        <skos:prefLabel xml:lang="en">centreline segment</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">segment de l&apos;axe</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centroid -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centroid">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ELFF"/>
+        <skos:prefLabel xml:lang="en">centroid</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">centroÃ¯de</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexBody -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexBody">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ThreeDIGF"/>
+        <skos:prefLabel xml:lang="en">convex body</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">corp convexe</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexHull -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexHull">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ConverxHull"/>
+        <skos:prefLabel xml:lang="en">convex hull</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">enveloppe convexe</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Corner -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Corner">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ELBFF"/>
+        <skos:prefLabel xml:lang="fr">coin</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">corner</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Edge -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Edge">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#OneDBFF"/>
+        <skos:prefLabel xml:lang="fr">bord</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">edge</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundary -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundary">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#FB"/>
+        <skos:prefLabel xml:lang="en">Fiat boundary</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">limite Fiat</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundaryPoint -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundaryPoint">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ELFF"/>
+        <skos:prefLabel xml:lang="en">Fiat boundary point</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Point de limit Fiat</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <skos:narrower rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centroid"/>
+        <skos:narrower rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundary"/>
+        <skos:narrower rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundaryPoint"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#FF"/>
+        <skos:definition xml:lang="fr">L&apos;ensemble des Ã©lÃ©ments caractÃ©ristique de la forme d&apos;un objet gÃ©ographique, dÃ©signÃ©s par un choix subjectif, suite Ã  une dÃ©cision humaine,  par une lois ou un dÃ©cret politique. (Example: les limites administratives.) </skos:definition>
+        <skos:definition xml:lang="en">The set of shape charateristic element of a geographic object, selected by by subjective choice, by a human decision, a law or a political decree. Exemple: administrative boundaries</skos:definition>
+        <skos:prefLabel xml:lang="fr">Element Fiat</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Fiat element</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <skos:narrower rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centre"/>
+        <skos:narrower rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centreline"/>
+        <skos:narrower rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelinePoint"/>
+        <skos:narrower rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelineSegment"/>
+        <skos:narrower rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexBody"/>
+        <skos:narrower rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexHull"/>
+        <skos:narrower rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundary"/>
+        <skos:narrower rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundaryPoint"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#IGF"/>
+        <skos:definition xml:lang="fr">L&apos;ensemble des Ã©lÃ©ments caractÃ©ristique de la frome d&apos;un objet gÃ©ographique obtenus par une opÃ©ration gÃ©omÃ©trique en relation avec des Ã©lÃ©ments de type bona fide et/ou fiat. Exemple: l&apos;axe d&apos;une route.</skos:definition>
+        <skos:definition xml:lang="en">The set of shape charaecteristic element of a geographic object obtained by a geometrical operation in relation with elements of type Bona Fide and/or Fiat. Exemple: a centreline of a road</skos:definition>
+        <skos:prefLabel xml:lang="fr">Element implicite</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">implicit element</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundary -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundary">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ImplicitGeometricalBoundary"/>
+        <skos:prefLabel xml:lang="en">implicit geometrical boundary</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">limite gÃ©omÃ©trique implicite</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundaryPoint -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundaryPoint">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ImplicitGeometricalBoundary"/>
+        <skos:prefLabel xml:lang="en">implicit geometrical boundary point</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">point de limite gÃ©omÃ©trique implicite</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Surface -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Surface">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#TwoDBFF"/>
+        <skos:prefLabel xml:lang="en">surface</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">surface</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geometrie/elementcaracteristique/VagueElement -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/VagueElement">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme"/>
+        <rdfs:seeAlso rdf:resource="http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#VF"/>
+        <skos:definition xml:lang="en">The set of shape charecteritic elements of geographical objects that represent geographic entities whome boundries are difficult to define by nature. Exemple: boundries of a valley</skos:definition>
+        <skos:definition xml:lang="fr">l&apos;ensemble d&apos;Ã©lÃ©ments caratÃ©ristiques de la forme d&apos;un objet gÃ©ographique diffcile Ã  dÃ©limiter d&apos;une maniÃ¨re prÃ©cise du fait de la nature de l&apos;entitÃ© gÃ©ographique qu&apos;il reprÃ©sente. Exemple: les limites d&apos;une vallÃ©e.</skos:definition>
+        <skos:prefLabel xml:lang="fr">Element vague</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Vague element</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geomtrie/methodeevaluation/DirectExternal -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geomtrie/methodeevaluation/DirectExternal">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#EvaluationMethodTypeCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geomtrie/methodeevaluation/DirectInternal -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geomtrie/methodeevaluation/DirectInternal">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#EvaluationMethodTypeCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geomtrie/methodeevaluation/Indirect -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geomtrie/methodeevaluation/Indirect">
+        <rdf:type rdf:resource="http://data.ign.fr/def/xysemantics#EvaluationMethodTypeCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://recherche.ign.fr/labos/cogit/cv.php?prenom=Abdelfettah&amp;nom=Feliachi -->
+
+
+    <owl:NamedIndividual rdf:about="http://recherche.ign.fr/labos/cogit/cv.php?prenom=Abdelfettah&amp;nom=Feliachi">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://recherche.ign.fr/labos/cogit/cv.php?prenom=BÃ©nÃ©dicte&amp;nom=Bucher -->
+
+
+    <owl:NamedIndividual rdf:about="http://recherche.ign.fr/labos/cogit/cv.php?prenom=BÃ©nÃ©dicte&amp;nom=Bucher">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://recherche.ign.fr/labos/cogit/cv.php?prenom=Nathalie&amp;nom=Abadie -->
+
+
+    <owl:NamedIndividual rdf:about="http://recherche.ign.fr/labos/cogit/cv.php?prenom=Nathalie&amp;nom=Abadie">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/ -->
+
+

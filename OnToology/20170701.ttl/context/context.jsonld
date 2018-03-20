@@ -1,0 +1,188 @@
+{
+  "@context" : {
+    "ShapeCharacteristicElementType" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType"
+    },
+    "evaluationResult" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#evaluationResult",
+      "@type" : "@id"
+    },
+    "ShapeCharacteristicElement" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#ShapeCharacteristicElement"
+    },
+    "AbsolutePositionalAccuracy" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#AbsolutePositionalAccuracy"
+    },
+    "Unit" : {
+      "@id" : "http://qudt.org/schema/qudt#Unit"
+    },
+    "geometricResolution" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#geometricResolution",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "license" : {
+      "@id" : "http://creativecommons.org/ns#license"
+    },
+    "evaluationMethod" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#evaluationMethod",
+      "@type" : "@id"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued"
+    },
+    "EvaluationMethod" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#EvaluationMethod"
+    },
+    "Geometry" : {
+      "@id" : "http://data.ign.fr/def/geometrie#Geometry"
+    },
+    "host" : {
+      "@id" : "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#host",
+      "@type" : "@id"
+    },
+    "EquivalentScaleResolution" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#EquivalentScaleResolution"
+    },
+    "altLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#altLabel"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "narrower" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#narrower",
+      "@type" : "@id"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Result" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#Result"
+    },
+    "GeometricResolution" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#GeometricResolution"
+    },
+    "IndirectEvaluation" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#IndirectEvaluation"
+    },
+    "DataEvaluation" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#DataEvaluation"
+    },
+    "Person" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Person"
+    },
+    "deductiveSource" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#deductiveSource",
+      "@type" : "@id"
+    },
+    "shapeCharacteristicElementType" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#shapeCharacteristicElementType",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "value" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#value",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "GroundDistanceResolution" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#GroundDistanceResolution"
+    },
+    "geometry" : {
+      "@id" : "http://data.ign.fr/def/geometrie#geometry",
+      "@type" : "@id"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/terms/rights"
+    },
+    "evaluationMethodTypeCode" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#evaluationMethodTypeCode",
+      "@type" : "@id"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "definition" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#definition"
+    },
+    "DistanceResolution" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#DistanceResolution"
+    },
+    "ConceptScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "absolutePositionalAccuracy" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#absolutePositionalAccuracy",
+      "@type" : "@id"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/terms/publisher"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "unit" : {
+      "@id" : "http://qudt.org/schema/qudt#unit",
+      "@type" : "@id"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "Entity" : {
+      "@id" : "http://www.w3.org/ns/prov#Entity"
+    },
+    "AngularDistanceResolution" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#AngularDistanceResolution"
+    },
+    "broader" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#broader",
+      "@type" : "@id"
+    },
+    "SampleBasedInspection" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#SampleBasedInspection"
+    },
+    "FullInspection" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#FullInspection"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "scaleDenominator" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#scaleDenominator",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor"
+    },
+    "EvaluationMethodTypeCode" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#EvaluationMethodTypeCode"
+    },
+    "AggregationDerivation" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#AggregationDerivation"
+    },
+    "prefLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
+    },
+    "inScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "isModeledFrom" : {
+      "@id" : "http://data.ign.fr/def/xysemantics#isModeledFrom",
+      "@type" : "@id"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    }
+  }
+}
