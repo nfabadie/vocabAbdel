@@ -1,3 +1,5 @@
+# This ontology is Watched by Ontoology
+
 @prefix : <http://data.ign.fr/def/xysemantics#> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix sf: <http://www.opengis.net/ont/sf#> .
@@ -62,6 +64,8 @@
 #    Annotation properties
 #
 #################################################################
+
+
 
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
