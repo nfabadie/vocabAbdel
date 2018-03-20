@@ -1,0 +1,17 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "ngeo:Geometry" "base:EvaluationMethod" "sf:Geometry" "base:SampleBasedInspection" "base:AggregationDerivation" "base:AngularDistanceResolution" "b4bffb9b5e5054f18add8a884648d824" "base:IndirectEvaluation" "base:EquivalentScaleResolution" "base:GeometricResolution" "base:DataEvaluation" "base:DistanceResolution" "base:FullInspection" "base:GroundDistanceResolution" "geom:Geometry" ; /*classes style*/
+	"base:SampleBasedInspection" -> "base:DataEvaluation" [ label = "rdfs:subClassOf" ];
+	"base:DataEvaluation" -> "base:EvaluationMethod" [ label = "rdfs:subClassOf" ];
+	"base:AggregationDerivation" -> "base:EvaluationMethod" [ label = "rdfs:subClassOf" ];
+	"base:GroundDistanceResolution" -> "base:DistanceResolution" [ label = "rdfs:subClassOf" ];
+	"base:EquivalentScaleResolution" -> "base:GeometricResolution" [ label = "rdfs:subClassOf" ];
+	"base:IndirectEvaluation" -> "b4bffb9b5e5054f18add8a884648d824" [ label = "rdfs:subClassOf" ];
+	"base:DistanceResolution" -> "base:GeometricResolution" [ label = "rdfs:subClassOf" ];
+	"base:FullInspection" -> "base:DataEvaluation" [ label = "rdfs:subClassOf" ];
+	"base:AngularDistanceResolution" -> "base:DistanceResolution" [ label = "rdfs:subClassOf" ];
+	"geom:Geometry" -> "sf:Geometry" [ label = "rdfs:subClassOf" ];
+	"geom:Geometry" -> "ngeo:Geometry" [ label = "rdfs:subClassOf" ];
+
+}
