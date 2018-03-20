@@ -1,0 +1,624 @@
+<http://data.ign.fr/def/xysemantics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://data.ign.fr/def/xysemantics> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/2.0/> .
+<http://data.ign.fr/def/xysemantics> <http://creativecommons.org/ns#license> <http://opendatacommons.org/licenses/by/> .
+<http://data.ign.fr/def/xysemantics> <http://creativecommons.org/ns#license> <http://www.data.gouv.fr/Licence-Ouverte-Open-Licence> .
+<http://data.ign.fr/def/xysemantics> <http://purl.org/dc/terms/contributor> <http://cedric.cnam.fr/~hamdif/> .
+<http://data.ign.fr/def/xysemantics> <http://purl.org/dc/terms/contributor> <http://recherche.ign.fr/labos/cogit/cv.php?prenom=B\u00C3\u00A9n\u00C3\u00A9dicte&nom=Bucher> .
+<http://data.ign.fr/def/xysemantics> <http://purl.org/dc/terms/creator> <http://recherche.ign.fr/labos/cogit/cv.php?prenom=Abdelfettah&nom=Feliachi> .
+<http://data.ign.fr/def/xysemantics> <http://purl.org/dc/terms/creator> <http://recherche.ign.fr/labos/cogit/cv.php?prenom=Nathalie&nom=Abadie> .
+<http://data.ign.fr/def/xysemantics> <http://purl.org/dc/terms/description> "Ontologie des \u00C3\u00A9l\u00C3\u00A9ments repr\u00C3\u00A9sentant la s\u00C3\u00A9mantique des r\u00C3\u00A9f\u00C3\u00A9rences spatiales."@fr .
+<http://data.ign.fr/def/xysemantics> <http://purl.org/dc/terms/description> "Ontologie of elements tha represents the semantic of spatiales references."@en .
+<http://data.ign.fr/def/xysemantics> <http://purl.org/dc/terms/issued> "2016-01-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.ign.fr/def/xysemantics> <http://purl.org/dc/terms/modified> "2017-07-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.ign.fr/def/xysemantics> <http://purl.org/dc/terms/publisher> <http://fr.dbpedia.org/resource/Institut_national_de_l%27information_g%C3%A9ographique_et_foresti%C3%A8re> .
+<http://data.ign.fr/def/xysemantics> <http://purl.org/dc/terms/rights> "Copyright 2017, IGN" .
+<http://data.ign.fr/def/xysemantics> <http://purl.org/dc/terms/title> "Ontologie de la s\u00C3\u00A9mantique des XY"@fr .
+<http://data.ign.fr/def/xysemantics> <http://purl.org/dc/terms/title> "XY semantics ontology"@en .
+<http://data.ign.fr/def/xysemantics> <http://purl.org/vocab/vann/preferredNamespacePrefix> "xysemantics" .
+<http://data.ign.fr/def/xysemantics> <http://purl.org/vocab/vann/preferredNamespaceUri> <http://data.ign.fr/def/xysemantics> .
+<http://data.ign.fr/def/xysemantics> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.1 - 2017-07-01" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://data.ign.fr/def/geometrie#geometry
+<http://data.ign.fr/def/geometrie#geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.ign.fr/def/geometrie#geometry> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.ign.fr/def/geometrie#Geometry> .
+<http://data.ign.fr/def/geometrie#geometry> <http://www.w3.org/2000/01/rdf-schema#comment> "Geometric primitive associated to an objet to represent its location and possibly its forme"@en .
+<http://data.ign.fr/def/geometrie#geometry> <http://www.w3.org/2000/01/rdf-schema#comment> "Primitive g\u00C3\u00A9om\u00C3\u00A9trique associ\u00C3\u00A9e \u00C3  un objet pour repr\u00C3\u00A9senter sa localisation et \u00C3\u00A9ventuellement sa forme."@fr .
+<http://data.ign.fr/def/geometrie#geometry> <http://www.w3.org/2000/01/rdf-schema#label> "a pour g\u00C3\u00A9om\u00C3\u00A9trie"@fr .
+<http://data.ign.fr/def/geometrie#geometry> <http://www.w3.org/2000/01/rdf-schema#label> "has geometry"@en .
+# 
+# http://data.ign.fr/def/xysemantics#absolutePositionalAccuracy
+<http://data.ign.fr/def/xysemantics#absolutePositionalAccuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.ign.fr/def/xysemantics#absolutePositionalAccuracy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/geometrie#Geometry> .
+<http://data.ign.fr/def/xysemantics#absolutePositionalAccuracy> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.ign.fr/def/xysemantics#AbsolutePositionalAccuracy> .
+<http://data.ign.fr/def/xysemantics#absolutePositionalAccuracy> <http://www.w3.org/2000/01/rdf-schema#comment> "D\u00C3\u00A9signe l'\u00C3\u00A9l\u00C3\u00A9ment de qualit\u00C3\u00A9 qui repr\u00C3\u00A9sente la pr\u00C3\u00A9cision absolue de position."@fr .
+<http://data.ign.fr/def/xysemantics#absolutePositionalAccuracy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the quality element that represents the absolute positional accuracy."@en .
+<http://data.ign.fr/def/xysemantics#absolutePositionalAccuracy> <http://www.w3.org/2000/01/rdf-schema#label> "a pour pr\u00C3\u00A9cision absolue de position"@fr .
+<http://data.ign.fr/def/xysemantics#absolutePositionalAccuracy> <http://www.w3.org/2000/01/rdf-schema#label> "has absolute postitional accuracy"@en .
+# 
+# http://data.ign.fr/def/xysemantics#deductiveSource
+<http://data.ign.fr/def/xysemantics#deductiveSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.ign.fr/def/xysemantics#deductiveSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/xysemantics#IndirectEvaluation> .
+<http://data.ign.fr/def/xysemantics#deductiveSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Entity> .
+<http://data.ign.fr/def/xysemantics#deductiveSource> <http://www.w3.org/2000/01/rdf-schema#comment> "D\u00C3\u00A9signe l'information relative aux donn\u00C3\u00A9es utilis\u00C3\u00A9es dans une m\u00C3\u00A9thode d'\u00C3\u00A9valuation d\u00C3\u00A9ductive (indirecte). Cf. ISO 19157:2013, partie 9.2.3 et tableau C.4 ligne 50."@fr .
+<http://data.ign.fr/def/xysemantics#deductiveSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the piece information used in a deductive (indirect) evaluation method. The range of this property is PROV-O:Entity. Cf. ISO 19157:2013, section 9.2.3 and table C.4 line 50."@en .
+<http://data.ign.fr/def/xysemantics#deductiveSource> <http://www.w3.org/2000/01/rdf-schema#label> "a pour source de d\u00C3\u00A9duction"@fr .
+<http://data.ign.fr/def/xysemantics#deductiveSource> <http://www.w3.org/2000/01/rdf-schema#label> "has deductive source"@en .
+# 
+# http://data.ign.fr/def/xysemantics#evaluationMethod
+<http://data.ign.fr/def/xysemantics#evaluationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.ign.fr/def/xysemantics#evaluationMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/xysemantics#AbsolutePositionalAccuracy> .
+<http://data.ign.fr/def/xysemantics#evaluationMethod> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.ign.fr/def/xysemantics#EvaluationMethod> .
+<http://data.ign.fr/def/xysemantics#evaluationMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "D\u00C3\u00A9signe la m\u00C3\u00A9thode d'\u00C3\u00A9valuation de l'\u00C3\u00A9l\u00C3\u00A9ment de qualit\u00C3\u00A9. Cf. ISO 19157:2013, partie 7.4.3 et tableau C.2 ligne 8."@fr .
+<http://data.ign.fr/def/xysemantics#evaluationMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates  the evaluation method of the quality element. Cf. ISO 19157:2013, section 7.4.3 and table C.2 line 8."@en .
+<http://data.ign.fr/def/xysemantics#evaluationMethod> <http://www.w3.org/2000/01/rdf-schema#label> "a pour m\u00C3\u00A9thode d'\u00C3\u00A9valuation"@fr .
+<http://data.ign.fr/def/xysemantics#evaluationMethod> <http://www.w3.org/2000/01/rdf-schema#label> "has evaluation method"@en .
+# 
+# http://data.ign.fr/def/xysemantics#evaluationMethodTypeCode
+<http://data.ign.fr/def/xysemantics#evaluationMethodTypeCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.ign.fr/def/xysemantics#evaluationMethodTypeCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/xysemantics#EvaluationMethod> .
+<http://data.ign.fr/def/xysemantics#evaluationMethodTypeCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.ign.fr/def/xysemantics#EvaluationMethodTypeCode> .
+<http://data.ign.fr/def/xysemantics#evaluationMethodTypeCode> <http://www.w3.org/2000/01/rdf-schema#comment> "D\u00C3\u00A9signe le type de m\u00C3\u00A9thode utilis\u00C3\u00A9e pour \u00C3\u00A9valuer l'\u00C3\u00A9l\u00C3\u00A9ment de qualit\u00C3\u00A9. Cf. ISO 19157:2013, partie 7.4.3, et, tableau C.4 ligne 42."@fr .
+<http://data.ign.fr/def/xysemantics#evaluationMethodTypeCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the type of evalution method of a quality element. Cf. ISO 19157:2013, section 7.4.3 and table C.4 line 42."@en .
+<http://data.ign.fr/def/xysemantics#evaluationMethodTypeCode> <http://www.w3.org/2000/01/rdf-schema#label> "a pour type de m\u00C3\u00A9thode d'\u00C3\u00A9valuation"@fr .
+<http://data.ign.fr/def/xysemantics#evaluationMethodTypeCode> <http://www.w3.org/2000/01/rdf-schema#label> "has evaluation method type code"@en .
+<http://data.ign.fr/def/xysemantics#evaluationMethodTypeCode> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#evaluationMethodType> .
+# 
+# http://data.ign.fr/def/xysemantics#evaluationResult
+<http://data.ign.fr/def/xysemantics#evaluationResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.ign.fr/def/xysemantics#evaluationResult> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/xysemantics#AbsolutePositionalAccuracy> .
+<http://data.ign.fr/def/xysemantics#evaluationResult> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.ign.fr/def/xysemantics#Result> .
+<http://data.ign.fr/def/xysemantics#evaluationResult> <http://www.w3.org/2000/01/rdf-schema#comment> "D\u00C3\u00A9signe le r\u00C3\u00A9sultat de l'\u00C3\u00A9valuation d'un \u00C3\u00A9l\u00C3\u00A9ment de qualit\u00C3\u00A9. Cf. ISO 19157:2013, partie 7.4.4.1 et tableau C.2 ligne 9."@fr .
+<http://data.ign.fr/def/xysemantics#evaluationResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates sthe evaluation result  of a data quality element. Cf. ISO 19157:2013, section 7.4.4.1 and table C.2 line 9."@en .
+<http://data.ign.fr/def/xysemantics#evaluationResult> <http://www.w3.org/2000/01/rdf-schema#label> "a pour r\u00C3\u00A9sultat d'\u00C3\u00A9valuation"@fr .
+<http://data.ign.fr/def/xysemantics#evaluationResult> <http://www.w3.org/2000/01/rdf-schema#label> "has evaluation result"@en .
+<http://data.ign.fr/def/xysemantics#evaluationResult> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#result> .
+# 
+# http://data.ign.fr/def/xysemantics#geometricResolution
+<http://data.ign.fr/def/xysemantics#geometricResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.ign.fr/def/xysemantics#geometricResolution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/geometrie#Geometry> .
+<http://data.ign.fr/def/xysemantics#geometricResolution> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.ign.fr/def/xysemantics#GeometricResolution> .
+<http://data.ign.fr/def/xysemantics#geometricResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "D\u00C3\u00A9signe la r\u00C3\u00A9solution de la g\u00C3\u00A9om\u00C3\u00A9trie"@fr .
+<http://data.ign.fr/def/xysemantics#geometricResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the spatial resolution of the geometry ."@en .
+<http://data.ign.fr/def/xysemantics#geometricResolution> <http://www.w3.org/2000/01/rdf-schema#label> "a pour r\u00C3\u00A9solution geomtrique"@fr .
+<http://data.ign.fr/def/xysemantics#geometricResolution> <http://www.w3.org/2000/01/rdf-schema#label> "has resolution"@en .
+# 
+# http://data.ign.fr/def/xysemantics#isModeledFrom
+<http://data.ign.fr/def/xysemantics#isModeledFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.ign.fr/def/xysemantics#isModeledFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/geometrie#Geometry> .
+<http://data.ign.fr/def/xysemantics#isModeledFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElement> .
+<http://data.ign.fr/def/xysemantics#isModeledFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "D\u00C3\u00A9signe l'\u00C3\u00A9l\u00C3\u00A9ment caract\u00C3\u00A9ristique de la forme utilis\u00C3\u00A9 pour la mod\u00C3\u00A9lisation g\u00C3\u00A9om\u00C3\u00A9trique"@fr .
+<http://data.ign.fr/def/xysemantics#isModeledFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the shape characteristic element used for the geometric modelling"@en .
+<http://data.ign.fr/def/xysemantics#isModeledFrom> <http://www.w3.org/2000/01/rdf-schema#label> "est mod\u00C3\u00A9lis\u00C3\u00A9 \u00C3  partir de"@fr .
+<http://data.ign.fr/def/xysemantics#isModeledFrom> <http://www.w3.org/2000/01/rdf-schema#label> "is modelled from"@en .
+# 
+# http://data.ign.fr/def/xysemantics#shapeCharacteristicElementType
+<http://data.ign.fr/def/xysemantics#shapeCharacteristicElementType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.ign.fr/def/xysemantics#shapeCharacteristicElementType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElement> .
+<http://data.ign.fr/def/xysemantics#shapeCharacteristicElementType> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/def/xysemantics#shapeCharacteristicElementType> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates the shape characteristic element chosen for the geometric moddeling."@en .
+<http://data.ign.fr/def/xysemantics#shapeCharacteristicElementType> <http://www.w3.org/2000/01/rdf-schema#label> "a pour type d'\u00C3\u00A9l\u00C3\u00A9ment caract\u00C3\u00A9ristique de la forme"@fr .
+<http://data.ign.fr/def/xysemantics#shapeCharacteristicElementType> <http://www.w3.org/2000/01/rdf-schema#label> "has form charactestic element type"@en .
+<http://data.ign.fr/def/xysemantics#shapeCharacteristicElementType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "D\u00C3\u00A9signe le type l'\u00C3\u00A9l\u00C3\u00A9ment caract\u00C3\u00A9ristique de la forme choisi pour repr\u00C3\u00A9senter la g\u00C3\u00A9om\u00C3\u00A9trie."@fr .
+# 
+# http://qudt.org/schema/qudt#unit
+<http://qudt.org/schema/qudt#unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://qudt.org/schema/qudt#unit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/xysemantics#DistanceResolution> .
+<http://qudt.org/schema/qudt#unit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/xysemantics#Result> .
+<http://qudt.org/schema/qudt#unit> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt#Unit> .
+# 
+# http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#host
+<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#host> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#host> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElement> .
+# 
+# http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#narrower
+<http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://data.ign.fr/def/xysemantics#scaleDenominator
+<http://data.ign.fr/def/xysemantics#scaleDenominator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.ign.fr/def/xysemantics#scaleDenominator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/xysemantics#EquivalentScaleResolution> .
+<http://data.ign.fr/def/xysemantics#scaleDenominator> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.ign.fr/def/xysemantics#scaleDenominator> <http://www.w3.org/2000/01/rdf-schema#comment> "Le d\u00C3\u00A9nominateur de l'\u00C3\u00A9chelle equivalente qui repr\u00C3\u00A9sente la r\u00C3\u00A9solution g\u00C3\u00A9om\u00C3\u00A9trique. Cf. ISO 19115-1:2014 tableau B.3.3 ligne 78. "@fr .
+<http://data.ign.fr/def/xysemantics#scaleDenominator> <http://www.w3.org/2000/01/rdf-schema#comment> "The denominator of the ratio representing the equivalent scale resolution. Cf. ISO 19115-1:2014 table B.3.3 line 78. "@en .
+<http://data.ign.fr/def/xysemantics#scaleDenominator> <http://www.w3.org/2000/01/rdf-schema#label> "d\u00C3\u00A9nominateur d'\u00C3\u00A9chelle"@fr .
+<http://data.ign.fr/def/xysemantics#scaleDenominator> <http://www.w3.org/2000/01/rdf-schema#label> "scale denominator"@en .
+# 
+# http://data.ign.fr/def/xysemantics#value
+<http://data.ign.fr/def/xysemantics#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.ign.fr/def/xysemantics#value> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/xysemantics#DistanceResolution> .
+<http://data.ign.fr/def/xysemantics#value> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/xysemantics#Result> .
+<http://data.ign.fr/def/xysemantics#value> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://data.ign.fr/def/xysemantics#value> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative value of the result of a data quality evaluation or the distance geomtric resolution"@en .
+<http://data.ign.fr/def/xysemantics#value> <http://www.w3.org/2000/01/rdf-schema#comment> "valeur quantitative du r\u00C3\u00A9sultat d'\u00C3\u00A9valuation d'une qualit\u00C3\u00A9 de donn\u00C3\u00A9e ou d'une r\u00C3\u00A9solution g\u00C3\u00A9om\u00C3\u00A9trique exprim\u00C3\u00A9e en distance"@fr .
+<http://data.ign.fr/def/xysemantics#value> <http://www.w3.org/2000/01/rdf-schema#label> "valeur"@fr .
+<http://data.ign.fr/def/xysemantics#value> <http://www.w3.org/2000/01/rdf-schema#label> "value"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://data.ign.fr/def/geometrie#Geometry
+<http://data.ign.fr/def/geometrie#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.ign.fr/def/geometrie#Geometry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geovocab.org/geometry#Geometry> .
+<http://data.ign.fr/def/geometrie#Geometry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/sf#Geometry> .
+<http://data.ign.fr/def/geometrie#Geometry> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry"@en .
+<http://data.ign.fr/def/geometrie#Geometry> <http://www.w3.org/2000/01/rdf-schema#label> "G\u00C3\u00A9om\u00C3\u00A9trie"@fr .
+# 
+# http://data.ign.fr/def/xysemantics#AbsolutePositionalAccuracy
+<http://data.ign.fr/def/xysemantics#AbsolutePositionalAccuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.ign.fr/def/xysemantics#AbsolutePositionalAccuracy> <http://www.w3.org/2000/01/rdf-schema#comment> "Quaility element representing the gap between the coordinates reported values and their real values . Cf. ISO 19157:2013, section 7.3.4 and table C.2 line 20."@en .
+<http://data.ign.fr/def/xysemantics#AbsolutePositionalAccuracy> <http://www.w3.org/2000/01/rdf-schema#comment> "\u00C3\u00A9l\u00C3\u00A9ment de qualit\u00C3\u00A9 qui repr\u00C3\u00A9sente la proximit\u00C3\u00A9 des valeurs de coordonn\u00C3\u00A9es rapport\u00C3\u00A9es par rapport aux valeurs v\u00C3\u00A9ritables ou consid\u00C3\u00A9r\u00C3\u00A9es comme telles. Cf. ISO 19157:2013, partie 7.3.4 et tableau C.2 ligne 20."@fr .
+<http://data.ign.fr/def/xysemantics#AbsolutePositionalAccuracy> <http://www.w3.org/2000/01/rdf-schema#label> "absolute positional planimetric accuracy"@en .
+<http://data.ign.fr/def/xysemantics#AbsolutePositionalAccuracy> <http://www.w3.org/2000/01/rdf-schema#label> "pr\u00C3\u00A9cision planim\u00C3\u00A9trique absolue"@fr .
+<http://data.ign.fr/def/xysemantics#AbsolutePositionalAccuracy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#AbsoluteExternalPositionalAccuracy> .
+# 
+# http://data.ign.fr/def/xysemantics#AggregationDerivation
+<http://data.ign.fr/def/xysemantics#AggregationDerivation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.ign.fr/def/xysemantics#AggregationDerivation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.ign.fr/def/xysemantics#EvaluationMethod> .
+<http://data.ign.fr/def/xysemantics#AggregationDerivation> <http://www.w3.org/2000/01/rdf-schema#comment> "Evaluation methode of spatial data quality by aggregation or derivation from other quality elements. Cf. ISO 19157:2013, section 9.3 and table C.4 line 55 ."@en .
+<http://data.ign.fr/def/xysemantics#AggregationDerivation> <http://www.w3.org/2000/01/rdf-schema#comment> "M\u00C3\u00A9thode d'\u00C3\u00A9valuation de la qualit\u00C3\u00A9 des donn\u00C3\u00A9es g\u00C3\u00A9ographique par agr\u00C3\u00A9gation ou d\u00C3\u00A9rivation \u00C3  partir d'autres \u00C3\u00A9l\u00C3\u00A9ment de qualit\u00C3\u00A9. Cf. ISO 19157:2013, partie 9.3 et tableau C.4 ligne 55 ."@fr .
+<http://data.ign.fr/def/xysemantics#AggregationDerivation> <http://www.w3.org/2000/01/rdf-schema#label> "aggregation/derivation based evaluation"@en .
+<http://data.ign.fr/def/xysemantics#AggregationDerivation> <http://www.w3.org/2000/01/rdf-schema#label> "\u00C3\u00A9valuation par agr\u00C3\u00A9gation/d\u00C3\u00A9rivation"@fr .
+# 
+# http://data.ign.fr/def/xysemantics#AngularDistanceResolution
+<http://data.ign.fr/def/xysemantics#AngularDistanceResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.ign.fr/def/xysemantics#AngularDistanceResolution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.ign.fr/def/xysemantics#DistanceResolution> .
+<http://data.ign.fr/def/xysemantics#AngularDistanceResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Geometric resolution represented as a sampling angular measurement. Cf. ISO 19115-1:2014 table B.3.4 line 83."@en .
+<http://data.ign.fr/def/xysemantics#AngularDistanceResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "R\u00C3\u00A9solution g\u00C3\u00A9om\u00C3\u00A9trique exprim\u00C3\u00A9e par une mesure d'\u00C3\u00A9chantillonage angulaire. Cf. ISO 19115-1:2014 tableau B.3.4 ligne 83."@fr .
+<http://data.ign.fr/def/xysemantics#AngularDistanceResolution> <http://www.w3.org/2000/01/rdf-schema#label> "Angular Distance resolution."@en .
+<http://data.ign.fr/def/xysemantics#AngularDistanceResolution> <http://www.w3.org/2000/01/rdf-schema#label> "R\u00C3\u00A9solution par distance angulaire."@fr .
+# 
+# http://data.ign.fr/def/xysemantics#DataEvaluation
+<http://data.ign.fr/def/xysemantics#DataEvaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.ign.fr/def/xysemantics#DataEvaluation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.ign.fr/def/xysemantics#EvaluationMethod> .
+<http://data.ign.fr/def/xysemantics#DataEvaluation> <http://www.w3.org/2000/01/rdf-schema#comment> "Evaluation methode of spatial data quality by data inspection. Cf. ISO 19157:2013, section9.2 and table C.4 line 47 ."@en .
+<http://data.ign.fr/def/xysemantics#DataEvaluation> <http://www.w3.org/2000/01/rdf-schema#comment> "M\u00C3\u00A9thode d'\u00C3\u00A9valuation de qualit\u00C3\u00A9 par inspections des donn\u00C3\u00A9es.  Cf. ISO 19157:2013, partie 9.2 et tableau C.4 ligne 47 ."@fr .
+<http://data.ign.fr/def/xysemantics#DataEvaluation> <http://www.w3.org/2000/01/rdf-schema#label> "data evaluation"@en .
+<http://data.ign.fr/def/xysemantics#DataEvaluation> <http://www.w3.org/2000/01/rdf-schema#label> "\u00C3\u00A9valuation des donn\u00C3\u00A9es"@fr .
+# 
+# http://data.ign.fr/def/xysemantics#DistanceResolution
+<http://data.ign.fr/def/xysemantics#DistanceResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.ign.fr/def/xysemantics#DistanceResolution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.ign.fr/def/xysemantics#GeometricResolution> .
+<http://data.ign.fr/def/xysemantics#DistanceResolution> <http://www.w3.org/2000/01/rdf-schema#label> "Distance resolution"@en .
+<http://data.ign.fr/def/xysemantics#DistanceResolution> <http://www.w3.org/2000/01/rdf-schema#label> "R\u00C3\u00A9solution par distance"@fr .
+# 
+# http://data.ign.fr/def/xysemantics#EquivalentScaleResolution
+<http://data.ign.fr/def/xysemantics#EquivalentScaleResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.ign.fr/def/xysemantics#EquivalentScaleResolution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.ign.fr/def/xysemantics#GeometricResolution> .
+<http://data.ign.fr/def/xysemantics#EquivalentScaleResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Gemetric resolution represented as a scale of comparable map or a paper plan. Cf. ISO 19115-1:2014 table B.3.4 line 80."@en .
+<http://data.ign.fr/def/xysemantics#EquivalentScaleResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "R\u00C3\u00A9solution g\u00C3\u00A9om\u00C3\u00A9trique des donn\u00C3\u00A9es exprim\u00C3\u00A9e comme l'\u00C3\u00A9chelle d'une carte ou d'un plan papier comparable. Cf. ISO 19115-1:2014 tableau B.3.4 ligne 80."@fr .
+<http://data.ign.fr/def/xysemantics#EquivalentScaleResolution> <http://www.w3.org/2000/01/rdf-schema#label> "Equivalent scale Resolution."@en .
+<http://data.ign.fr/def/xysemantics#EquivalentScaleResolution> <http://www.w3.org/2000/01/rdf-schema#label> "R\u00C3\u00A9solution par \u00C3\u00A9chelle \u00C3\u00A9quivalente."@fr .
+# 
+# http://data.ign.fr/def/xysemantics#EvaluationMethod
+<http://data.ign.fr/def/xysemantics#EvaluationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.ign.fr/def/xysemantics#EvaluationMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "Evaluation method of quality of spatial data. Cf. ISO 19157:2013, section 9.2 and table C.4 line 41."@en .
+<http://data.ign.fr/def/xysemantics#EvaluationMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "m\u00C3\u00A9thode d'\u00C3\u00A9valuation de qualit\u00C3\u00A9 des donn\u00C3\u00A9es g\u00C3\u00A9ographiques. Cf. ISO 19157:2013, partie 9.2 et tableau C.4 ligne 41."@fr .
+<http://data.ign.fr/def/xysemantics#EvaluationMethod> <http://www.w3.org/2000/01/rdf-schema#label> "evaluation method"@en .
+<http://data.ign.fr/def/xysemantics#EvaluationMethod> <http://www.w3.org/2000/01/rdf-schema#label> "m\u00C3\u00A9thode d'\u00C3\u00A9valuation"@fr .
+# 
+# http://data.ign.fr/def/xysemantics#EvaluationMethodTypeCode
+<http://data.ign.fr/def/xysemantics#EvaluationMethodTypeCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.ign.fr/def/xysemantics#EvaluationMethodTypeCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Code du type de la m\u00C3\u00A9thode d'\u00C3\u00A9valuation de qualit\u00C3\u00A9 (directe interne, directe externe ou indirecte). Cf. ISO 19157:2013, partie C.3.2 et tableau C.12."@fr .
+<http://data.ign.fr/def/xysemantics#EvaluationMethodTypeCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Evaluation methode type code: directe interne, directe externe ou indirecte. Cf. ISO 19157:2013, section C.3.2 and tablea C.12."@en .
+<http://data.ign.fr/def/xysemantics#EvaluationMethodTypeCode> <http://www.w3.org/2000/01/rdf-schema#label> "evaluation method type code"@en .
+<http://data.ign.fr/def/xysemantics#EvaluationMethodTypeCode> <http://www.w3.org/2000/01/rdf-schema#label> "type de m\u00C3\u00A9thode d'\u00C3\u00A9valuation"@fr .
+<http://data.ign.fr/def/xysemantics#EvaluationMethodTypeCode> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#EvaluationMethodTypeCode> .
+# 
+# http://data.ign.fr/def/xysemantics#FullInspection
+<http://data.ign.fr/def/xysemantics#FullInspection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.ign.fr/def/xysemantics#FullInspection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.ign.fr/def/xysemantics#DataEvaluation> .
+<http://data.ign.fr/def/xysemantics#FullInspection> <http://www.w3.org/2000/01/rdf-schema#comment> "Evaluation methode of spatial data quality by full data inspection. Cf. ISO 19157:2013, section 9.2.2 and table C.4 line 48 ."@en .
+<http://data.ign.fr/def/xysemantics#FullInspection> <http://www.w3.org/2000/01/rdf-schema#comment> "M\u00C3\u00A9thode d'\u00C3\u00A9valuation de la qualit\u00C3\u00A9 par inspection exhaustive des donn\u00C3\u00A9es. Cf. ISO 19157:2013, partie 9.2.2 et tableau C.4 ligne 48."@fr .
+<http://data.ign.fr/def/xysemantics#FullInspection> <http://www.w3.org/2000/01/rdf-schema#label> "full inspection"@en .
+<http://data.ign.fr/def/xysemantics#FullInspection> <http://www.w3.org/2000/01/rdf-schema#label> "inspection compl\u00C3\u00A8te"@fr .
+# 
+# http://data.ign.fr/def/xysemantics#GeometricResolution
+<http://data.ign.fr/def/xysemantics#GeometricResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.ign.fr/def/xysemantics#GeometricResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Geomtric resolution expressed as a scale factor, a distance or an angle. Cf. ISO 19115-1:2014 table B.3.4 line 79."@en .
+<http://data.ign.fr/def/xysemantics#GeometricResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "R\u00C3\u00A9solution g\u00C3\u00A9om\u00C3\u00A9trique exprim\u00C3\u00A9e sous forme d'un facteur d'\u00C3\u00A9chelle, d'une distance ou d'un angle. Cf. ISO 19115-1:2014 tableau B.3.4 ligne 79."@fr .
+<http://data.ign.fr/def/xysemantics#GeometricResolution> <http://www.w3.org/2000/01/rdf-schema#label> "Geomtric resolution."@en .
+<http://data.ign.fr/def/xysemantics#GeometricResolution> <http://www.w3.org/2000/01/rdf-schema#label> "R\u00C3\u00A9solution g\u00C3\u00A9om\u00C3\u00A9trique."@fr .
+# 
+# http://data.ign.fr/def/xysemantics#GroundDistanceResolution
+<http://data.ign.fr/def/xysemantics#GroundDistanceResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.ign.fr/def/xysemantics#GroundDistanceResolution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.ign.fr/def/xysemantics#DistanceResolution> .
+<http://data.ign.fr/def/xysemantics#GroundDistanceResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Geometric resolution represented as a sampling distance on the ground. Cf. ISO 19115-1:2014 table B.3.4 line 81."@en .
+<http://data.ign.fr/def/xysemantics#GroundDistanceResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "R\u00C3\u00A9solution g\u00C3\u00A9om\u00C3\u00A9trique exprim\u00C3\u00A9e par  une distance \u00C3\u00A9chantillon par rapport au sol. Cf. ISO 19115-1:2014 tableau B.3.4 ligne 81."@fr .
+<http://data.ign.fr/def/xysemantics#GroundDistanceResolution> <http://www.w3.org/2000/01/rdf-schema#label> "Ground length distance resolution."@en .
+<http://data.ign.fr/def/xysemantics#GroundDistanceResolution> <http://www.w3.org/2000/01/rdf-schema#label> "R\u00C3\u00A9solution par distance de longeur au sol."@fr .
+# 
+# http://data.ign.fr/def/xysemantics#IndirectEvaluation
+<http://data.ign.fr/def/xysemantics#IndirectEvaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.ign.fr/def/xysemantics#IndirectEvaluation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://data.ign.fr/def/xysemantics#DataEvaluation> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://data.ign.fr/def/xysemantics#evaluationMethodTypeCode> .
+_:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://data.ign.fr/def/xysemantics#Indirect> .
+<http://data.ign.fr/def/xysemantics#Indirect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.ign.fr/def/xysemantics#IndirectEvaluation> <http://www.w3.org/2000/01/rdf-schema#comment> "Evaluation methode of spatial data quality frrom external knowledge or product experiance. It can be subjetcive. Cf. ISO 19157:2013, section 9.2.3 and table C.4 line 49."@en .
+<http://data.ign.fr/def/xysemantics#IndirectEvaluation> <http://www.w3.org/2000/01/rdf-schema#comment> "M\u00C3\u00A9thode d'\u00C3\u00A9valuation de la qualit\u00C3\u00A9 des donn\u00C3\u00A9es g\u00C3\u00A9ographiques \u00C3  partir d'une connaissance externe ou l'exp\u00C3\u00A9rience du produit. Elle peut \u00C3\u00AAtre subjective. Cf. ISO 19157:2013, partie 9.2.3 et tableau C.4 ligne 49 ."@fr .
+<http://data.ign.fr/def/xysemantics#IndirectEvaluation> <http://www.w3.org/2000/01/rdf-schema#label> "indirect evaluation"@en .
+<http://data.ign.fr/def/xysemantics#IndirectEvaluation> <http://www.w3.org/2000/01/rdf-schema#label> "\u00C3\u00A9valuation indirecte"@fr .
+# 
+# http://data.ign.fr/def/xysemantics#Result
+<http://data.ign.fr/def/xysemantics#Result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.ign.fr/def/xysemantics#Result> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitaive result representing the value obtained by an evaluation of a data quality element. Cf. ISO 19157:2013, section 7.4.4.2 et table C.5 line 63."@en .
+<http://data.ign.fr/def/xysemantics#Result> <http://www.w3.org/2000/01/rdf-schema#comment> "R\u00C3\u00A9sultat quantitatif repr\u00C3\u00A9sentant les valeurs obtenues par l'\u00C3\u00A9valuation d'un \u00C3\u00A9l\u00C3\u00A9ment de qualit\u00C3\u00A9 des donn\u00C3\u00A9es. Cf. ISO 19157:2013, partie 7.4.4.2 et tableau C.5 ligne 63."@fr .
+<http://data.ign.fr/def/xysemantics#Result> <http://www.w3.org/2000/01/rdf-schema#label> "evaluation result"@en .
+<http://data.ign.fr/def/xysemantics#Result> <http://www.w3.org/2000/01/rdf-schema#label> "r\u00C3\u00A9sultat d'\u00C3\u00A9valuation"@fr .
+<http://data.ign.fr/def/xysemantics#Result> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#QuantitativeResult> .
+# 
+# http://data.ign.fr/def/xysemantics#SampleBasedInspection
+<http://data.ign.fr/def/xysemantics#SampleBasedInspection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.ign.fr/def/xysemantics#SampleBasedInspection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.ign.fr/def/xysemantics#DataEvaluation> .
+<http://data.ign.fr/def/xysemantics#SampleBasedInspection> <http://www.w3.org/2000/01/rdf-schema#comment> "Evaluation methode of spatial data quality by data sample inspection. Cf. ISO 19157:2013, section 9.2.2 and table C.4 line 51."@en .
+<http://data.ign.fr/def/xysemantics#SampleBasedInspection> <http://www.w3.org/2000/01/rdf-schema#comment> "M\u00C3\u00A9thode d'\u00C3\u00A9valuation de qualit\u00C3\u00A9 par inspection d'un sous ensemble de donn\u00C3\u00A9es. Cf. ISO 19157:2013, partie 9.2.2 et tableau C.4 ligne 51."@fr .
+<http://data.ign.fr/def/xysemantics#SampleBasedInspection> <http://www.w3.org/2000/01/rdf-schema#label> "sample based evaluation"@en .
+<http://data.ign.fr/def/xysemantics#SampleBasedInspection> <http://www.w3.org/2000/01/rdf-schema#label> "\u00C3\u00A9valuation d'\u00C3\u00A9chantillon"@fr .
+# 
+# http://data.ign.fr/def/xysemantics#ShapeCharacteristicElement
+<http://data.ign.fr/def/xysemantics#ShapeCharacteristicElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.ign.fr/def/xysemantics#ShapeCharacteristicElement> <http://www.w3.org/2000/01/rdf-schema#comment> "L'\u00C3\u00A9l\u00C3\u00A9ment caract\u00C3\u00A9ristique de la forme choisi pour la repr\u00C3\u00A9sentation g\u00C3\u00A9om\u00C3\u00A9trique."@fr .
+<http://data.ign.fr/def/xysemantics#ShapeCharacteristicElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Shape characteristic element chosen for the geometric moddeling."@en .
+<http://data.ign.fr/def/xysemantics#ShapeCharacteristicElement> <http://www.w3.org/2000/01/rdf-schema#label> "shape characteristic element"@en .
+<http://data.ign.fr/def/xysemantics#ShapeCharacteristicElement> <http://www.w3.org/2000/01/rdf-schema#label> "\u00C3\u00A9l\u00C3\u00A9ment caratr\u00C3\u00A9ristique de la forme"@fr .
+<http://data.ign.fr/def/xysemantics#ShapeCharacteristicElement> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCESpatialFeatures/current#SF> .
+# 
+# http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType
+<http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of the shape caracteristic element chosen to represent the geometry"@en .
+<http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type de l'\u00C3\u00A9l\u00C3\u00A9ment caract\u00C3\u00A9ristique de la forme choisi pour repr\u00C3\u00A9senter la g\u00C3\u00A9om\u00C3\u00A9trie"@fr .
+<http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> <http://www.w3.org/2000/01/rdf-schema#label> "shape characteristique element type."@en .
+<http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> <http://www.w3.org/2000/01/rdf-schema#label> "type d'\u00C3\u00A9l\u00C3\u00A9ment caract\u00C3\u00A9ristique de la forme"@fr .
+# 
+# http://geovocab.org/geometry#Geometry
+<http://geovocab.org/geometry#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://qudt.org/schema/qudt#Unit
+<http://qudt.org/schema/qudt#Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.opengis.net/ont/sf#Geometry
+<http://www.opengis.net/ont/sf#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://cedric.cnam.fr/~hamdif/
+<http://cedric.cnam.fr/~hamdif/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://cedric.cnam.fr/~hamdif/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+# 
+# http://data.ign.fr/def/xysemantics#Indirect
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Body
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Body> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Body> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Body> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Body> <http://www.w3.org/2004/02/skos/core#broader> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Body> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Body> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ThreeDBFF> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Body> <http://www.w3.org/2004/02/skos/core#prefLabel> "body"@en .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Body> <http://www.w3.org/2004/02/skos/core#prefLabel> "corp"@fr .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundary
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundary> <http://www.w3.org/2004/02/skos/core#broader> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundary> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundary> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#BFB> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundary> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bona Fide  boundary"@en .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundary> <http://www.w3.org/2004/02/skos/core#prefLabel> "limite Bona Fide"@fr .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundaryPoint
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundaryPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundaryPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundaryPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundaryPoint> <http://www.w3.org/2004/02/skos/core#broader> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundaryPoint> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundaryPoint> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#BFB> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundaryPoint> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bona Fide  boundary point"@en .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundaryPoint> <http://www.w3.org/2004/02/skos/core#prefLabel> "point de limite Bona Fide"@fr .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Body> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundary> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideBoundaryPoint> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Corner> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Edge> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Surface> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#BFF> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> <http://www.w3.org/2004/02/skos/core#definition> "L'ensemble des \u00C3\u00A9l\u00C3\u00A9ments caract\u00C3\u00A9ristiques de la forme d'un objet g\u00C3\u00A9ographique mat\u00C3\u00A9rialis\u00C3\u00A9s par une discontinuit\u00C3\u00A9 physique et donc facilement identifiable. Exemple: l'angle d'un b\u00C3\u00A2timent."@fr .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> <http://www.w3.org/2004/02/skos/core#definition> "The set of shape characteristic elements of a geographic object materialized by physical discontinuity, and thus easily recognisable. Exemple: the corner of a building."@en .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bona Fide element"@en .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Element Bona Fide"@fr .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centre
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centre> <http://www.w3.org/2004/02/skos/core#broader> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centre> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centre> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ELIGF> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centre> <http://www.w3.org/2004/02/skos/core#prefLabel> "centre"@en .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centre> <http://www.w3.org/2004/02/skos/core#prefLabel> "centre"@fr .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centreline
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centreline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centreline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centreline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centreline> <http://www.w3.org/2004/02/skos/core#broader> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centreline> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centreline> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#CenterLine> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centreline> <http://www.w3.org/2004/02/skos/core#prefLabel> "axe"@fr .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centreline> <http://www.w3.org/2004/02/skos/core#prefLabel> "centreline"@en .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelinePoint
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelinePoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelinePoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelinePoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelinePoint> <http://www.w3.org/2004/02/skos/core#broader> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelinePoint> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelinePoint> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ELIGF> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelinePoint> <http://www.w3.org/2004/02/skos/core#prefLabel> "centreline point"@en .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelinePoint> <http://www.w3.org/2004/02/skos/core#prefLabel> "point de l'axe"@fr .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelineSegment
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelineSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelineSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelineSegment> <http://www.w3.org/2004/02/skos/core#broader> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelineSegment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#OneDIGF> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelineSegment> <http://www.w3.org/2004/02/skos/core#prefLabel> "centreline segment"@en .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelineSegment> <http://www.w3.org/2004/02/skos/core#prefLabel> "segment de l'axe"@fr .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centroid
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centroid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centroid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centroid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centroid> <http://www.w3.org/2004/02/skos/core#broader> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centroid> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centroid> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ELFF> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centroid> <http://www.w3.org/2004/02/skos/core#prefLabel> "centroid"@en .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centroid> <http://www.w3.org/2004/02/skos/core#prefLabel> "centro\u00C3\u00AFde"@fr .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexBody
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexBody> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexBody> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexBody> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexBody> <http://www.w3.org/2004/02/skos/core#broader> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexBody> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexBody> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ThreeDIGF> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexBody> <http://www.w3.org/2004/02/skos/core#prefLabel> "convex body"@en .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexBody> <http://www.w3.org/2004/02/skos/core#prefLabel> "corp convexe"@fr .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexHull
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexHull> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexHull> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexHull> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexHull> <http://www.w3.org/2004/02/skos/core#broader> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexHull> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexHull> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ConverxHull> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexHull> <http://www.w3.org/2004/02/skos/core#prefLabel> "convex hull"@en .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexHull> <http://www.w3.org/2004/02/skos/core#prefLabel> "enveloppe convexe"@fr .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Corner
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Corner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Corner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Corner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Corner> <http://www.w3.org/2004/02/skos/core#broader> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Corner> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Corner> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ELBFF> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Corner> <http://www.w3.org/2004/02/skos/core#prefLabel> "coin"@fr .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Corner> <http://www.w3.org/2004/02/skos/core#prefLabel> "corner"@en .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Edge
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Edge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Edge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Edge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Edge> <http://www.w3.org/2004/02/skos/core#broader> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Edge> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Edge> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#OneDBFF> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Edge> <http://www.w3.org/2004/02/skos/core#prefLabel> "bord"@fr .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Edge> <http://www.w3.org/2004/02/skos/core#prefLabel> "edge"@en .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundary
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundary> <http://www.w3.org/2004/02/skos/core#broader> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundary> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundary> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#FB> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundary> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fiat boundary"@en .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundary> <http://www.w3.org/2004/02/skos/core#prefLabel> "limite Fiat"@fr .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundaryPoint
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundaryPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundaryPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundaryPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundaryPoint> <http://www.w3.org/2004/02/skos/core#broader> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundaryPoint> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundaryPoint> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ELFF> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundaryPoint> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fiat boundary point"@en .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundaryPoint> <http://www.w3.org/2004/02/skos/core#prefLabel> "Point de limit Fiat"@fr .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centroid> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundary> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatBoundaryPoint> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#FF> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement> <http://www.w3.org/2004/02/skos/core#definition> "L'ensemble des \u00C3\u00A9l\u00C3\u00A9ments caract\u00C3\u00A9ristique de la forme d'un objet g\u00C3\u00A9ographique, d\u00C3\u00A9sign\u00C3\u00A9s par un choix subjectif, suite \u00C3  une d\u00C3\u00A9cision humaine,  par une lois ou un d\u00C3\u00A9cret politique. (Example: les limites administratives.) "@fr .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement> <http://www.w3.org/2004/02/skos/core#definition> "The set of shape charateristic element of a geographic object, selected by by subjective choice, by a human decision, a law or a political decree. Exemple: administrative boundaries"@en .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Element Fiat"@fr .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/FiatElement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fiat element"@en .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centre> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Centreline> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelinePoint> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CentrelineSegment> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexBody> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ConvexHull> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundary> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> <http://www.w3.org/2004/02/skos/core#narrower> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundaryPoint> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#IGF> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> <http://www.w3.org/2004/02/skos/core#definition> "L'ensemble des \u00C3\u00A9l\u00C3\u00A9ments caract\u00C3\u00A9ristique de la frome d'un objet g\u00C3\u00A9ographique obtenus par une op\u00C3\u00A9ration g\u00C3\u00A9om\u00C3\u00A9trique en relation avec des \u00C3\u00A9l\u00C3\u00A9ments de type bona fide et/ou fiat. Exemple: l'axe d'une route."@fr .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> <http://www.w3.org/2004/02/skos/core#definition> "The set of shape charaecteristic element of a geographic object obtained by a geometrical operation in relation with elements of type Bona Fide and/or Fiat. Exemple: a centreline of a road"@en .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Element implicite"@fr .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> <http://www.w3.org/2004/02/skos/core#prefLabel> "implicit element"@en .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundary
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundary> <http://www.w3.org/2004/02/skos/core#broader> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundary> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundary> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ImplicitGeometricalBoundary> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundary> <http://www.w3.org/2004/02/skos/core#prefLabel> "implicit geometrical boundary"@en .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundary> <http://www.w3.org/2004/02/skos/core#prefLabel> "limite g\u00C3\u00A9om\u00C3\u00A9trique implicite"@fr .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundaryPoint
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundaryPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundaryPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundaryPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundaryPoint> <http://www.w3.org/2004/02/skos/core#broader> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitElement> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundaryPoint> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundaryPoint> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#ImplicitGeometricalBoundary> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundaryPoint> <http://www.w3.org/2004/02/skos/core#prefLabel> "implicit geometrical boundary point"@en .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/ImplicitGeometricalBoundaryPoint> <http://www.w3.org/2004/02/skos/core#prefLabel> "point de limite g\u00C3\u00A9om\u00C3\u00A9trique implicite"@fr .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Surface
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Surface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Surface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Surface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Surface> <http://www.w3.org/2004/02/skos/core#broader> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/BonaFideElement> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Surface> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Surface> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#TwoDBFF> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Surface> <http://www.w3.org/2004/02/skos/core#prefLabel> "surface"@en .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/Surface> <http://www.w3.org/2004/02/skos/core#prefLabel> "surface"@fr .
+# 
+# http://data.ign.fr/id/codes/geometrie/elementcaracteristique/VagueElement
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/VagueElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/VagueElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#ShapeCharacteristicElementType> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/VagueElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/VagueElement> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.ign.fr/id/codes/geometrie/elementcaracteristique/CharacteristicElementScheme> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/VagueElement> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ifgi.uni-muenster.de/~schades/Phd/DOLCEGeoSpatialFeatures/current#VF> .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/VagueElement> <http://www.w3.org/2004/02/skos/core#definition> "The set of shape charecteritic elements of geographical objects that represent geographic entities whome boundries are difficult to define by nature. Exemple: boundries of a valley"@en .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/VagueElement> <http://www.w3.org/2004/02/skos/core#definition> "l'ensemble d'\u00C3\u00A9l\u00C3\u00A9ments carat\u00C3\u00A9ristiques de la forme d'un objet g\u00C3\u00A9ographique diffcile \u00C3  d\u00C3\u00A9limiter d'une mani\u00C3\u00A8re pr\u00C3\u00A9cise du fait de la nature de l'entit\u00C3\u00A9 g\u00C3\u00A9ographique qu'il repr\u00C3\u00A9sente. Exemple: les limites d'une vall\u00C3\u00A9e."@fr .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/VagueElement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Element vague"@fr .
+<http://data.ign.fr/id/codes/geometrie/elementcaracteristique/VagueElement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vague element"@en .
+# 
+# http://data.ign.fr/id/codes/geomtrie/methodeevaluation/DirectExternal
+<http://data.ign.fr/id/codes/geomtrie/methodeevaluation/DirectExternal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geomtrie/methodeevaluation/DirectExternal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#EvaluationMethodTypeCode> .
+# 
+# http://data.ign.fr/id/codes/geomtrie/methodeevaluation/DirectInternal
+<http://data.ign.fr/id/codes/geomtrie/methodeevaluation/DirectInternal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geomtrie/methodeevaluation/DirectInternal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#EvaluationMethodTypeCode> .
+# 
+# http://data.ign.fr/id/codes/geomtrie/methodeevaluation/Indirect
+<http://data.ign.fr/id/codes/geomtrie/methodeevaluation/Indirect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.ign.fr/id/codes/geomtrie/methodeevaluation/Indirect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ign.fr/def/xysemantics#EvaluationMethodTypeCode> .
+# 
+# http://recherche.ign.fr/labos/cogit/cv.php?prenom=Abdelfettah&nom=Feliachi
+<http://recherche.ign.fr/labos/cogit/cv.php?prenom=Abdelfettah&nom=Feliachi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://recherche.ign.fr/labos/cogit/cv.php?prenom=Abdelfettah&nom=Feliachi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+# 
+# http://recherche.ign.fr/labos/cogit/cv.php?prenom=BÃ©nÃ©dicte&nom=Bucher
+<http://recherche.ign.fr/labos/cogit/cv.php?prenom=B\u00C3\u00A9n\u00C3\u00A9dicte&nom=Bucher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://recherche.ign.fr/labos/cogit/cv.php?prenom=B\u00C3\u00A9n\u00C3\u00A9dicte&nom=Bucher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+# 
+# http://recherche.ign.fr/labos/cogit/cv.php?prenom=Nathalie&nom=Abadie
+<http://recherche.ign.fr/labos/cogit/cv.php?prenom=Nathalie&nom=Abadie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://recherche.ign.fr/labos/cogit/cv.php?prenom=Nathalie&nom=Abadie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
